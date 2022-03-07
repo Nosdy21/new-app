@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import supabase  from '../supabase';
+import useLocalStorage from './useLocalStorage';
 
 const Signin = () => {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useLocalStorage("")
+    const [password, setPassword] = useLocalStorage("")
     const [message, setMessage] = useState("")
 
     const handleSignin = async (e) => {
